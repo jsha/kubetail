@@ -91,6 +91,7 @@ func main2(nameFilter string, namespace string, sinceDur time.Duration) error {
 			fmt.Println()
 		}
 		fmt.Printf("==> %s <==\n", name)
+		printed++
 		_, err = os.Stdout.Write(onebyte[:])
 		if err != nil {
 			return fmt.Errorf("writing one byte: %w", err)
